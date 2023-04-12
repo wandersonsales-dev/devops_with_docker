@@ -37,3 +37,32 @@ root@0568fed2813a:/usr/src/app# tail -f ./text.log
 ```bash
 Secret message is: 'You can find the source code here: https://github.com/docker-hy'
 ```
+
+## Exercise 1.4
+
+### Commands
+
+```bash
+$ docker run -d -it --name ex_1_4 ubuntu
+$ docker exec -it ex_1_4 bash
+root@2d441a5fd9a7:/# apt update
+root@2d441a5fd9a7:/# apt install curl
+$ docker exec -it ex_1_4 sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done'
+```
+
+### Output
+
+```bash
+Input website:
+helsink.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://helsink.fi/">here</a>.</p>
+<hr>
+<address>Apache/2.4.18 (Ubuntu) Server at helsink.fi Port 80</address>
+</body></html>
+```
