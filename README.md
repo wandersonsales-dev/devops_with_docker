@@ -117,6 +117,8 @@ $ docker build . -t curler
 $ docker run -it curler
 ```
 
+### Dockerfile
+
 ```Dockerfile
 # Starts from the ubuntu:20.04 image
 FROM ubuntu:20.04
