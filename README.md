@@ -156,3 +156,25 @@ FROM devopsdockeruh/simple-web-service:alpine
 CMD server
 
 ```
+
+## Exercise 1.9
+
+### Commands
+
+```bash
+$ touch text.log
+$ docker run -v "$(pwd)/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service
+```
+
+### text.log
+
+```
+2023-04-14 02:33:16 +0000 UTC
+2023-04-14 02:33:18 +0000 UTC
+2023-04-14 02:33:20 +0000 UTC
+2023-04-14 02:33:22 +0000 UTC
+2023-04-14 02:33:24 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-04-14 02:33:26 +0000 UTC
+2023-04-14 02:33:28 +0000 UTC
+```
