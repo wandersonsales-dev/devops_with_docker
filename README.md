@@ -178,3 +178,11 @@ Secret message is: 'You can find the source code here: https://github.com/docker
 2023-04-14 02:33:26 +0000 UTC
 2023-04-14 02:33:28 +0000 UTC
 ```
+
+## Exercise 1.10
+
+### Commands
+
+```bash
+$ docker run -p 8080:8080 devopsdockeruh/simple-web-service server
+```
