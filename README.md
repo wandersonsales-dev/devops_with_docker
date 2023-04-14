@@ -136,3 +136,23 @@ COPY script.sh .
 # Execute script.sh on container start
 CMD ./script.sh
 ```
+
+## Exercise 1.8
+
+### Commands
+
+```bash
+$ docker build . -t web-server
+$ docker run web-server
+```
+
+### Dockerfile
+
+```Dockerfile
+# Starts from the devopsdockeruh/simple-web-service:alpine image
+FROM devopsdockeruh/simple-web-service:alpine
+
+# Execute the server command on container start
+CMD server
+
+```
