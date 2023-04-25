@@ -186,3 +186,22 @@ Secret message is: 'You can find the source code here: https://github.com/docker
 ```bash
 $ docker run -p 8080:8080 devopsdockeruh/simple-web-service server
 ```
+
+## Exercise 1.11
+
+### Dockerfile
+
+```Dockerfile
+FROM openjdk:8
+EXPOSE 8080
+WORKDIR /usr/src/app
+COPY . .
+RUN ./mvnw package
+CMD ["java", "-jar", "./target/docker-example-1.1.3.jar"]
+```
+
+### Commands
+
+```bash
+$ docker build . -t java-project && docker run -p 8080:8080 java-project
+```
